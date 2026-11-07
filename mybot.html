@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tampa Bay Homes Assistant | AI Real Estate Bot</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  
+    <style>
+    :root {
+      --navy: #0b2545;
+      --gold: #c9a227;
+      --light-bg: #f5f7fa;
+    }
+    body {
+      background-color: var(--light-bg);
+    }
+    .bg-navy {
+      background-color: var(--navy);
+    }
+    .hero {
+      background-color: var(--navy);
+      color: #ffffff;
+      padding: 5rem 0;
+    }
+    .badge-ai {
+      background-color: var(--gold);
+      color: var(--navy);
+      font-weight: 600;
+    }
+    .btn-gold {
+      background-color: var(--gold);
+      color: var(--navy);
+      font-weight: 600;
+      border: none;
+    }
+    .btn-gold:hover {
+      background-color: #b08d1f;
+      color: #ffffff;
+    }
+    .site-footer {
+      background-color: var(--navy);
+      color: #ffffff;
+    }
+    .site-footer a {
+      color: var(--gold);
+    }
+    .panel {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+    .feature-card {
+      background-color: #ffffff;
+      border-top: 4px solid var(--gold);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+    .feature-card h3 {
+      color: var(--navy);
+    }
+    .question {
+      background-color: var(--light-bg);
+      border-left: 4px solid var(--gold);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+    }
+    .step-number {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--navy);
+      color: var(--gold);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+
+  <!-- ===== Botpress AI chatbot (embed code from Botpress) ===== -->
+  <script src="https://cdn.botpress.cloud/webchat/v5.0/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2026/11/07/07/20261107071726-1DL39NNZ.js" defer></script>
+</head>
+<body>
+
+  <!-- ===== TOP BAR ===== -->
+  <nav class="navbar navbar-dark bg-navy">
+    <div class="container">
+      <span class="navbar-brand fw-bold">Tampa Bay Homes Assistant</span>
+      <a class="nav-link text-white" href="https://vamsi549506.github.io/real-estate-website/" target="_blank" rel="noopener">Visit Tampa Bay Homes</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO: bot title and call to action ===== -->
+  <header class="hero text-center">
+    <div class="container">
+      <span class="badge badge-ai mb-3">AI Assistant · Powered by Botpress</span>
+      <h1 class="display-4 fw-bold">Tampa Bay Homes Assistant</h1>
+      <p class="lead mb-4">Ask questions about sample Tampa Bay listings, neighborhoods, and housing market trends, and get instant answers.</p>
+      <button type="button" class="btn btn-gold btn-lg" id="openChat">Chat with the Assistant</button>
+      <p class="small mt-3 mb-0 text-white-50">Or click the chat bubble in the bottom-right corner.</p>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <!-- Content sections will go here in Part 2 -->
+         <!-- ===== WHAT THE ASSISTANT CAN DO ===== -->
+    <section class="mb-5">
+      <h2 class="text-center mb-2">What the Assistant Can Do</h2>
+      <p class="text-center text-muted mb-4">The assistant is an AI chatbot that answers questions using the content of the Tampa Bay Homes website.</p>
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-3">
+          <div class="feature-card p-4 h-100">
+            <h3 class="h5">Find Listings</h3>
+            <p class="mb-0">Search the 8 sample listings by neighborhood, budget, bedrooms, property type, or status.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="feature-card p-4 h-100">
+            <h3 class="h5">Compare Neighborhoods</h3>
+            <p class="mb-0">Learn which of the 5 Tampa Bay neighborhoods fits a need, such as families or a lower budget.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="feature-card p-4 h-100">
+            <h3 class="h5">Explain Market Trends</h3>
+            <p class="mb-0">Get median prices, active listings, and days on market for Tampa Bay from 2017 to 2026.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="feature-card p-4 h-100">
+            <h3 class="h5">Define Real Estate Terms</h3>
+            <p class="mb-0">Understand terms such as median price, pending, days on market, condo, and townhome.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TRY ASKING ===== -->
+    <section class="panel p-4 mb-5">
+      <h2 class="h4 mb-3">Try Asking</h2>
+      <div class="row g-2">
+        <div class="col-md-6"><p class="question mb-0">"What homes are for sale in Wesley Chapel?"</p></div>
+        <div class="col-md-6"><p class="question mb-0">"Which homes for sale are under $400,000?"</p></div>
+        <div class="col-md-6"><p class="question mb-0">"Which neighborhood is good for families?"</p></div>
+        <div class="col-md-6"><p class="question mb-0">"How has the median listing price changed since 2017?"</p></div>
+        <div class="col-md-6"><p class="question mb-0">"How long do homes take to sell in Tampa Bay now?"</p></div>
+        <div class="col-md-6"><p class="question mb-0">"What does pending mean?"</p></div>
+      </div>
+    </section>
+
+    <!-- ===== WHAT THE ASSISTANT KNOWS ===== -->
+    <section class="mb-5">
+      <h2 class="text-center mb-2">What the Assistant Knows</h2>
+      <p class="text-center text-muted mb-4">The assistant answers only from its knowledge base, which contains the data below.</p>
+
+      <!-- Sample listings -->
+      <div class="panel p-4 mb-4">
+        <h3 class="h5 mb-1">Sample Property Listings</h3>
+        <p class="text-muted small mb-3">Sample listings created for a class project. They are not real homes for sale.</p>
+        <div class="table-responsive">
+          <table class="table table-hover align-middle mb-0">
+            <thead class="table-light">
+              <tr>
+                <th>Address</th>
+                <th>Neighborhood</th>
+                <th>Price</th>
+                <th>Beds</th>
+                <th>Baths</th>
+                <th>Sq Ft</th>
+                <th>Type</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>2810 W Bay to Bay Blvd</td><td>South Tampa</td><td>$610,000</td><td>4</td><td>3</td><td>2,400</td><td>House</td><td><span class="badge bg-success">For Sale</span></td></tr>
+              <tr><td>10215 Westpark Preserve Blvd</td><td>Westchase</td><td>$485,000</td><td>3</td><td>2</td><td>1,950</td><td>House</td><td><span class="badge bg-success">For Sale</span></td></tr>
+              <tr><td>1402 Oakfield Dr</td><td>Brandon</td><td>$340,000</td><td>3</td><td>2</td><td>1,600</td><td>Townhome</td><td><span class="badge bg-warning text-dark">Pending</span></td></tr>
+              <tr><td>711 Channelside Dr, Unit 1205</td><td>Downtown Tampa</td><td>$395,000</td><td>2</td><td>2</td><td>1,150</td><td>Condo</td><td><span class="badge bg-success">For Sale</span></td></tr>
+              <tr><td>449 S Harbour Island Blvd, Unit 802</td><td>Downtown Tampa</td><td>$520,000</td><td>2</td><td>2</td><td>1,300</td><td>Condo</td><td><span class="badge bg-secondary">Sold</span></td></tr>
+              <tr><td>31045 Chesapeake Bay Dr</td><td>Wesley Chapel</td><td>$455,000</td><td>4</td><td>3</td><td>2,300</td><td>House</td><td><span class="badge bg-success">For Sale</span></td></tr>
+              <tr><td>27640 Cashford Cir</td><td>Wesley Chapel</td><td>$335,000</td><td>3</td><td>2.5</td><td>1,700</td><td>Townhome</td><td><span class="badge bg-success">For Sale</span></td></tr>
+              <tr><td>3215 W Sevilla St</td><td>South Tampa</td><td>$875,000</td><td>4</td><td>3.5</td><td>2,900</td><td>House</td><td><span class="badge bg-secondary">Sold</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Neighborhoods -->
+        <div class="col-lg-6">
+          <div class="panel p-4 h-100">
+            <h3 class="h5 mb-3">Neighborhoods</h3>
+            <ul class="mb-0">
+              <li class="mb-2"><strong>Downtown Tampa:</strong> high-rise condos near the Riverwalk and business district.</li>
+              <li class="mb-2"><strong>South Tampa:</strong> established areas like Hyde Park near Bayshore Boulevard, with higher prices.</li>
+              <li class="mb-2"><strong>Westchase:</strong> a planned community popular with families.</li>
+              <li class="mb-2"><strong>Brandon:</strong> a large suburb east of Tampa with more affordable homes.</li>
+              <li><strong>Wesley Chapel:</strong> a fast-growing Pasco County area with many new homes.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Market data -->
+        <div class="col-lg-6">
+          <div class="panel p-4 h-100">
+            <h3 class="h5 mb-3">Market Data</h3>
+            <ul class="mb-3">
+              <li class="mb-2">Median listing price: <strong>$269,900</strong> (2017) to <strong>$397,450</strong> (2026), a 47% increase</li>
+              <li class="mb-2">Price peak: <strong>$449,000</strong> in 2023</li>
+              <li class="mb-2">Active listings: <strong>18,292</strong> in 2026, up from a low of 4,662 in 2021</li>
+              <li>Median days on market: <strong>72 days</strong> in 2026, up from 29 days in 2022</li>
+            </ul>
+            <p class="text-muted small mb-0">Sources: Realtor.com data published by FRED (Federal Reserve Bank of St. Louis), and Redfin data for the Tampa metro area.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="panel p-4">
+      <h2 class="h4 mb-4">How the Assistant Works</h2>
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-3">
+          <div class="step-number mb-2">1</div>
+          <h3 class="h6">You ask a question</h3>
+          <p class="small text-muted mb-0">Type a question in the chat window.</p>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="step-number mb-2">2</div>
+          <h3 class="h6">It searches the knowledge base</h3>
+          <p class="small text-muted mb-0">The bot looks up the listings, neighborhoods, and market data it was given.</p>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="step-number mb-2">3</div>
+          <h3 class="h6">The AI writes an answer</h3>
+          <p class="small text-muted mb-0">A large language model writes a clear answer using only that information.</p>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="step-number mb-2">4</div>
+          <h3 class="h6">It cites the source</h3>
+          <p class="small text-muted mb-0">Answers show where the information came from, and the bot says when it does not know.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer py-4">
+    <div class="container text-center">
+      <p class="mb-1">&copy; 2026 Tampa Bay Homes Assistant &middot; Vamsi Krishana Chebrolu &middot; ISM 6225 Application Development</p>
+      <a href="https://github.com/Vamsi549506/tampa-bay-homes-assistant" target="_blank" rel="noopener">View source code on GitHub</a>
+    </div>
+  </footer>
+
+  <!-- ===== Open the chat when the gold button is clicked ===== -->
+  <script>
+    document.getElementById("openChat").addEventListener("click", function () {
+      window.botpress?.open();
+    });
+  </script>
+</body>
+</html>
